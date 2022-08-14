@@ -4,12 +4,15 @@ import "./styles.css";
 export default function Counter() {
   const [counter, setCounter] = useState(0);
 
+  // Component didMount
+  // useEffect(() => {
+  //   console.log("The useEffect ran");
+  // }, []);
+
+  // Component didUpdate
   useEffect(() => {
-    console.log("The component has mounted!");
-    return () => {
-      console.log("The component has unmounted!");
-    };
-  }, []);
+    console.log("The useEffect ran");
+  }, [counter]);
 
   return (
     <div className="Counter">
