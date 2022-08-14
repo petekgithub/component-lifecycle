@@ -10,9 +10,17 @@ export default function Counter() {
   // }, []);
 
   // Component didUpdate
+  // useEffect(() => {
+  //   console.log("The useEffect ran");
+  // }, [counter]);
+
+  // Component WilllUnmount
   useEffect(() => {
     console.log("The useEffect ran");
-  }, [counter]);
+    return () => {
+      console.log("the return is run");
+    };
+  }, []);
 
   return (
     <div className="Counter">
