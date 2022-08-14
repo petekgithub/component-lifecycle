@@ -20,10 +20,13 @@ useEffect(() => {
 
 When I open at the console, useEffect will run and when I click the increment button useEffect will run again. useEffect will always run because we are passing in a variable that our useEffect depends on. It will only recall this if the variable in this array update
 
-// Component WilllUnmount
+- Component WilllUnmount
+
+```
 useEffect(() => {
 console.log("The useEffect ran");
 return () => {
 console.log("the return is run");
 };
 }, []);
+```
